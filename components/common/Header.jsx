@@ -6,9 +6,8 @@ import SettingsIcon from "@mui/icons-material/Settings";
 import { Spin as Hamburger } from "hamburger-react";
 import Drawer from "react-modern-drawer";
 import "react-modern-drawer/dist/index.css";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import TelegramIcon from "@mui/icons-material/Telegram";
 import { useRouter } from "next/router";
+import CallMadeIcon from "@mui/icons-material/CallMade";
 
 function Header() {
   const router = useRouter();
@@ -19,7 +18,7 @@ function Header() {
   };
 
   return (
-    <div className="w-full h-[60px] bg-[black] flex justify-between items-center border-b-[1px] border-solid border-[#f2ca90] px-2 md:px-5">
+    <div className="w-full h-[68px] bg-[black] flex justify-between items-center border-b-[1px] border-solid border-[#f2ca90] px-2 md:px-5">
       {/* ==========left portion */}
       <div className="flex justify-center items-center">
         {/* logo */}
@@ -34,9 +33,10 @@ function Header() {
               <Link
                 onClick={() => router.push(item.path)}
                 href={item.path}
-                className="text-[white] text-[17px] mr-8 font-light hover:opacity-70"
+                className="text-pink text-[17px] mr-8 font-light hover:opacity-70"
               >
                 {item.navItem}
+                <CallMadeIcon className="text-base ml-1 text-[rgb(202,190,236)]" />
               </Link>
             );
           })}
@@ -47,20 +47,20 @@ function Header() {
         {/* ==========ove coin icon and price */}
         <div className="xl:flex hidden justify-center items-center gap-2">
           <Image src="/Assets/CoinImage/ove.png" width={28} height={15}></Image>
-          <p className="text-[17px] text-[white]">$0.000012</p>
+          <p className="text-[17px] text-pink">$0.000012</p>
         </div>
         {/* Language */}
-        <LanguageIcon className="sm:block hidden text-[white] text-[28px] hover:opacity-70" />
+        <LanguageIcon className="sm:block hidden text-pink text-[28px] hover:opacity-70" />
         {/* Setting icon */}
-        <SettingsIcon className="sm:block hidden text-[white] text-[28px] hover:opacity-70" />
+        <SettingsIcon className="sm:block hidden text-pink text-[28px] hover:opacity-70" />
         {/* connect wallet button */}
-        <button className="text-white text-[12px] sm:text-[17px] bg-[#FFAA27] md:px-4 px-1 md:py-1 py-1 rounded-xl hover:opacity-70">
+        <button className="text-black text-[12px] md:block hidden sm:text-[17px] bg-pink px-4 py-[6px] rounded-md hover:opacity-70">
           Connect Wallet
         </button>
 
         <div className="xl:hidden block">
           <Hamburger
-            color="#FFAA27"
+            color="#E933FF"
             rounded
             size={24}
             toggled={isOpen}
@@ -77,11 +77,11 @@ function Header() {
         >
           <div className="w-full flex flex-col justify-center items-start p-4 py-12 gap-10  text-[#e8e1e1]">
             {/* Logo */}
-            <Link href="/">
+            {/* <Link href="/">
               <div className="w-[170px] h-[40px] flex justify-center items-center relative">
                 <Image src="/logo.svg" fill></Image>
               </div>
-            </Link>
+            </Link> */}
             {HeaderNav.map((item, index) => {
               return (
                 <Link
@@ -90,12 +90,19 @@ function Header() {
                     setIsOpen(false);
                   }}
                   href={item.path}
-                  className="w-full text-[#FFAA27] text-[18px] mr-8 font-light hover:opacity-70 border-b-[0.5px] border-solid border-[white]"
+                  className="w-full text-pink text-[18px] mr-8 font-light hover:opacity-70 border-b-[0.5px] border-solid border-[white]"
                 >
                   {item.navItem}
+                  <CallMadeIcon className="text-base ml-1 text-[rgb(202,190,236)]" />
                 </Link>
               );
             })}
+            <button
+              onClick={()=>{setIsOpen(false)}}
+              className="text-black text-[14px] bg-pink max-w-[230px] w-full h-[45px] rounded-md hover:opacity-70"
+            >
+              Connect Wallet
+            </button>
           </div>
         </Drawer>
       </div>
@@ -115,31 +122,19 @@ const HeaderNav = [
     path: "/liquidity",
   },
   {
-    navItem: "Limit",
-    path: "/swap",
+    navItem: "Twitter",
+    path: "https://twitter.com/i/flow/login",
   },
   {
-    navItem: "Launch",
-    path: "/swap",
+    navItem: "Telegram",
+    path: "https://telegr.am/user_mgt/login",
   },
   {
-    navItem: "Farms",
-    path: "/swap",
+    navItem: "Discord",
+    path: "https://discord.com/",
   },
   {
-    navItem: "Pools",
-    path: "/swap",
-  },
-  {
-    navItem: "Nft",
-    path: "/swap",
-  },
-  {
-    navItem: "Lottery",
-    path: "/swap",
-  },
-  {
-    navItem: "More",
-    path: "/swap",
+    navItem: "Instagram",
+    path: "https://www.instagram.com/",
   },
 ];

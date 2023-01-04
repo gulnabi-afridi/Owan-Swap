@@ -36,19 +36,19 @@ const AddLiquidity = ({ setLiquidity }) => {
             <div className="flex justify-center items-center gap-3">
               <ArrowBackIcon
                 onClick={() => setLiquidity(false)}
-                className="text-[30px] cursor-pointer text-[#FFAA27]"
+                className="text-[30px] cursor-pointer text-pink"
               />
-              <h2 className="uppercase font-semibold text-xl text-[#FFAA27]">
+              <h2 className="uppercase font-semibold text-xl text-pink">
                 {Coin.title}-{Sec_Coin.title}
               </h2>
             </div>
             {/* => Right icons */}
             <div className="flex items-center gap-[6px]">
-              <SettingsIcon className="cursor-pointer fill-[#FFAA27]" />
-              <RestoreIcon className="cursor-pointer fill-[#FFAA27]  " />
+              <SettingsIcon className="cursor-pointer text-pink" />
+              <RestoreIcon className="cursor-pointer text-pink  " />
             </div>
           </div>
-          <p className="text-[#FFAA27] text-[14px] flex justify-center items-center gap-2">
+          <p className="text-grey text-[14px] flex justify-center items-center gap-2">
             <HelpOutlineIcon className="text-[18px]" /> Receive LP tokens and
             earn 0.17% trading fees
           </p>
@@ -69,10 +69,10 @@ const AddLiquidity = ({ setLiquidity }) => {
                   <Image src={Coin.ico} alt="" fill />
                 </div>
                 <div className=" flex items-center justify-center  cursor-pointer">
-                  <h4 className="text-md text-[#FFAA27] font-semibold uppercase">
+                  <h4 className="text-md text-pink font-semibold uppercase">
                     {Coin.title}
                   </h4>
-                  <ExpandMoreIcon className="text-[#FFAA27]" />
+                  <ExpandMoreIcon className="text-pink" />
                 </div>
               </div>
               {/* input 1 */}
@@ -90,7 +90,7 @@ const AddLiquidity = ({ setLiquidity }) => {
               }}
               className="bg-[rgb(238,234,244)] w-[30px] h-[30px] rounded-full flex items-center justify-center cursor-pointer"
             >
-              <ArrowDownwardIcon className="text-2xl text-[#f9aa4b] font-bold full-shadow" />
+              <ArrowDownwardIcon className="text-2xl text-pink font-bold full-shadow" />
             </div>
             {/* bottom */}
             <div className="w-full flex flex-col items-start justify-center gap-1">
@@ -105,12 +105,12 @@ const AddLiquidity = ({ setLiquidity }) => {
                   <Image src={Sec_Coin.ico} alt="" fill />
                 </div>
                 <div className=" flex items-center justify-center  cursor-pointer">
-                  <h4 className="text-md font-semibold uppercase text-[#FFAA27]">
+                  <h4 className="text-md font-semibold uppercase text-pink">
                     {Sec_Coin.title}
                   </h4>
-                  <ExpandMoreIcon className="text-[#FFAA27]" />
+                  <ExpandMoreIcon className="text-pink" />
                 </div>
-                <ContentCopyIcon className="cursor-pointer text-base fill-[#FFAA27]" />
+                <ContentCopyIcon className="cursor-pointer text-base text-pink" />
               </div>
               {/* input 2 */}
               <input
@@ -121,35 +121,35 @@ const AddLiquidity = ({ setLiquidity }) => {
 
               {/* =======>prices and pool share  */}
               <div className="w-full flex flex-col gap-5 justify-center items-start p-4 my-4 border-[2px] border-solid border-[rgb(231,227,235)] rounded-xl">
-                <p className=" font-regular text-[14px] text-[#FFAA27]">
+                <p className=" font-regular text-[14px] text-pink">
                   Prices and pool share
                 </p>
                 {/*  */}
                 <div className="w-full flex justify-between items-center border-t-[2px] border-solid border-[rgb(231,227,235)] py-2">
                   {/* coin 1 per coin 2 */}
                   <div className="flex flex-col gap-1 justify-center items-center">
-                    <p className=" font-regular text-[16px] text-[#FFAA27]">
+                    <p className=" font-regular text-[16px] text-pink">
                       2024830
                     </p>
-                    <p className=" font-regular text-[14px] text-[#FFAA27]">
+                    <p className=" font-regular text-[14px] text-pink">
                       OVE per BNB
                     </p>
                   </div>
                   {/* coin 2 per 1 */}
                   <div className="flex flex-col gap-1 justify-center items-center">
-                    <p className=" font-regular text-[16px] text-[#FFAA27]">
+                    <p className=" font-regular text-[16px] text-pink">
                       0.00000049387
                     </p>
-                    <p className=" font-regular text-[14px] text-[#FFAA27]">
+                    <p className=" font-regular text-[14px] text-pink">
                       BNB per OVE
                     </p>
                   </div>
                   {/* share of pool */}
                   <div className="flex flex-col gap-1 justify-center items-center">
-                    <p className=" font-regular text-[16px] text-[#FFAA27]">
+                    <p className=" font-regular text-[16px] text-pink">
                       0%
                     </p>
-                    <p className=" font-regular text-[14px] text-[#FFAA27]">
+                    <p className=" font-regular text-[14px] text-pink">
                       Share of Pool
                     </p>
                   </div>
@@ -157,10 +157,10 @@ const AddLiquidity = ({ setLiquidity }) => {
               </div>
 
               <div className="w-full flex items-center justify-between px-2 py-2">
-                <p className="text-[13px] font-semibold text-[#FFAA27]">
+                <p className="text-[13px] font-semibold text-pink">
                   Slippage Tolerance
                 </p>
-                <div className="text-lg text-[#f9aa4b] font-semibold ">
+                <div className="text-lg text-pink font-semibold ">
                   0.5%
                 </div>
               </div>
@@ -170,7 +170,7 @@ const AddLiquidity = ({ setLiquidity }) => {
 
           <button
             onClick={() => setOpenModal(true)}
-            className="w-[90%] rounded-[25px] bg-[#FFAA27] py-3 px-5 text-black font-semibold hover:opacity-80 transition-all duration-500"
+            className="w-[90%] rounded-[25px] bg-pink py-3 px-5 text-black font-semibold hover:opacity-80 transition-all duration-500"
           >
             Connect Wallet
           </button>
@@ -178,7 +178,7 @@ const AddLiquidity = ({ setLiquidity }) => {
       </div>
       {/* =========>By adding liquidity how much you will earn */}
       <div className="w-full max-w-xs sm:max-w-sm rounded-2xl m-auto my-3 bg-[black] p-5 flex justify-center items-center full-shadow">
-        <p className="w-full text-center text-[14px] font-normal text-[#FFAA27]">
+        <p className="w-full text-center text-[14px] font-normal text-pink">
           🥞 By adding liquidity you'll earn 0.17% of all trades on this pair
           proportional to your share of the pool. Fees are added to the pool,
           accrue in real time and can be claimed by withdrawing your liquidity.
