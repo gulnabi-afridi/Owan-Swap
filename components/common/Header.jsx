@@ -50,9 +50,9 @@ function Header() {
           <p className="text-[17px] text-[white]">$0.000012</p>
         </div>
         {/* Language */}
-        <LanguageIcon className="xl:block hidden text-[white] text-[28px] hover:opacity-70" />
+        <LanguageIcon className="sm:block hidden text-[white] text-[28px] hover:opacity-70" />
         {/* Setting icon */}
-        <SettingsIcon className="xl:block hidden text-[white] text-[28px] hover:opacity-70" />
+        <SettingsIcon className="sm:block hidden text-[white] text-[28px] hover:opacity-70" />
         {/* connect wallet button */}
         <button className="text-white text-[12px] sm:text-[17px] bg-[#FFAA27] md:px-4 px-1 md:py-1 py-1 rounded-xl hover:opacity-70">
           Connect Wallet
