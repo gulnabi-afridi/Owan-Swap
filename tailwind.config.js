@@ -6,6 +6,8 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx}",
   ],
 
+  darkMode:"class",
+  
   theme: {
     screens: {
       xs: "375px",
@@ -17,7 +19,8 @@ module.exports = {
     colors: {
       pink: "#E933FF",
       grey: "#5A5A5A",
-      black: "#000000",
+      black: "#232323",
+      white:"#FFFFFF",
     },
   },
   plugins: [],

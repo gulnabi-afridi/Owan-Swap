@@ -5,40 +5,17 @@ import Image from "next/image";
 import Box from "@mui/material/Box";
 
 function FirstCoinModal({ open, setOpen, coin, setCoin }) {
-  const style = {
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    maxWidth: 450,
-    width: "100%",
-    bgcolor: "background.paper",
-    boxShadow: 24,
-    borderRadius: 8,
-    overflow: "hidden",
-    display: "flex",
-    flexDirection: "column",
-    gap: "16px",
-    paddingLeft: "20px",
-    paddingRight: "20px",
-    maxHeight: "700px",
-    outline: "none",
-    background:"black",
-    border:"2px solid white"
-  };
-
   const handleClose = () => {
     setOpen(false);
   };
 
   return (
     <Modal open={open} onClose={handleClose} className="mx-4">
-      <Box sx={style}>
+      <div className="absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] max-w-[450px] w-full shadow-md overflow-hidden flex flex-col gap-4
+       px-6 h-full max-h-[700px] outline-none bg-black border-2 border-solid rounded-3xl border-white">
         {/* => Top bar */}
         <div className="w-full py-6 flex items-center justify-between gap-3 border-solid border-0 border-b border-[rgb(231,227,235)]">
-          <h2 className="font-semibold text-xl text-pink">
-            Select a Token
-          </h2>
+          <h2 className="font-semibold text-xl text-pink">Select a Token</h2>
           <CloseIcon
             className="fill-yellow-500 cursor-pointer text-xl"
             onClick={() => setOpen(false)}
@@ -105,7 +82,7 @@ function FirstCoinModal({ open, setOpen, coin, setCoin }) {
         <button className="text-pink bg-[black] py-4 text-[18px] hover:opacity-70">
           Manage Token
         </button>
-      </Box>
+      </div>
     </Modal>
   );
 }

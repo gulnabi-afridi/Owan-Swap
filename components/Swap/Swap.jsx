@@ -20,8 +20,8 @@ const SwapModal = () => {
   const [Open_Sec_Coin_Modal, Set_Sec_Coin_Modal] = useState(false);
 
   const [Coin, Set_Coin] = useState({
-    ico: "/Assets/Coin/cake.png",
-    title: "cake",
+    ico: "/Assets/Coin/bsud.png",
+    title: "bsud",
   });
   const [Sec_Coin, Set_Sec_Coin] = useState({
     ico: "/Assets/Coin/cake.png",
@@ -29,8 +29,8 @@ const SwapModal = () => {
   });
 
   return (
-    <div className="w-full bg-[black] px-4 md:px-0 pt-10 pb-20">
-      <div className="w-full bg-[black] max-w-xs sm:max-w-sm rounded-2xl flex flex-col items-center justify-center m-auto full-shadow border-[2px] border-solid border-[white]">
+    <div className="w-full bg-black px-4 md:px-0 pt-10 pb-20">
+      <div className="w-full bg-black max-w-xs sm:max-w-sm rounded-2xl flex flex-col items-center justify-center m-auto full-shadow border-[2px] border-solid border-[white]">
         {/* => Top bar */}
         <div className="w-full rounded-t-2xl  py-4 px-4 flex flex-col items-center justify-center gap-3 border-solid border-0 border-b border-[rgb(231,227,235)]">
           <div className="w-full flex  items-center justify-between   ">
@@ -136,7 +136,7 @@ const SwapModal = () => {
 
           <button
             onClick={() => setOpenModal(true)}
-            className="w-[80%] rounded-[25px] bg-pink py-3 px-5 text-[black] font-semibold hover:opacity-80 transition-all duration-500"
+            className="w-[80%] rounded-[25px] bg-pink py-3 px-5 text-black font-semibold hover:opacity-80 transition-all duration-500"
           >
             Connect Wallet
           </button>
@@ -144,7 +144,7 @@ const SwapModal = () => {
       </div>
 
       {/* =========> summary */}
-      <div className="w-full max-w-xs sm:max-w-sm rounded-2xl m-auto my-4 bg-[black] p-5 flex flex-col gap-1 justify-start items-center full-shadow border-[2px] border-solid border-[white]">
+      <div className="w-full max-w-xs sm:max-w-sm rounded-2xl m-auto my-4 bg-black p-5 flex flex-col gap-1 justify-start items-center full-shadow border-[2px] border-solid border-[white]">
         {/* minimum received */}
         <div className="w-full flex justify-between items-center">
           <p className="text-pink text-[14px] flex justify-center items-center gap-2">

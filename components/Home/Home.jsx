@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function Home() {
   return (
-    <div className="w-full h-screen bg-[black]">
+    <div className="w-full h-screen bg-black">
       <div className="w-full h-full max-w-[1200px] m-auto flex flex-col md:flex-row justify-center items-center px-6 xl:px-0">
         {/* ===============>left portion */}
         <div className="md:w-[50%] w-full flex flex-col justify-center items-center md:items-start gap-4 md:gap-7">

@@ -23,13 +23,13 @@ const AddLiquidity = ({ setLiquidity }) => {
     title: "cake",
   });
   const [Sec_Coin, Set_Sec_Coin] = useState({
-    ico: "/Assets/Coin/cake.png",
-    title: "cake",
+    ico: "/Assets/Coin/bunny.png",
+    title: "bunny",
   });
 
   return (
-    <div className="w-full bg-[black] px-4 md:px-0  pt-10 pb-20">
-      <div className="w-full max-w-xs sm:max-w-sm rounded-2xl flex flex-col items-center bg-[black] border-[2px] border-solid border-[white] justify-center m-auto full-shadow">
+    <div className="w-full bg-black px-4 md:px-0  pt-10 pb-20">
+      <div className="w-full max-w-xs sm:max-w-sm rounded-2xl flex flex-col items-center bg-black border-[2px] border-solid border-[white] justify-center m-auto full-shadow">
         {/* => Top bar */}
         <div className="w-full rounded-t-2xl py-6 px-4 flex flex-col items-center justify-center gap-3 border-solid border-0 border-b border-[rgb(231,227,235)]">
           <div className="w-full flex  items-center justify-between   ">
@@ -177,7 +177,7 @@ const AddLiquidity = ({ setLiquidity }) => {
         </div>
       </div>
       {/* =========>By adding liquidity how much you will earn */}
-      <div className="w-full max-w-xs sm:max-w-sm rounded-2xl m-auto my-3 bg-[black] p-5 flex justify-center items-center full-shadow">
+      <div className="w-full max-w-xs sm:max-w-sm rounded-2xl m-auto my-3 bg-black p-5 flex justify-center items-center full-shadow">
         <p className="w-full text-center text-[14px] font-normal text-pink">
           🥞 By adding liquidity you'll earn 0.17% of all trades on this pair
           proportional to your share of the pool. Fees are added to the pool,

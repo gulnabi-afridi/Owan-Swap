@@ -12,8 +12,8 @@ const Liquidity = () => {
       {Add_Liquidity ? (
         <AddLiquidity setLiquidity={Set_Add_Liquidity} />
       ) : (
-        <div className="w-full h-screen bg-[black] px-4 md:px-0  pt-24">
-          <div className="w-full h-full max-h-[300px] max-w-xs sm:max-w-sm rounded-2xl flex flex-col items-center justify-center m-auto full-shadow bg-[black] border-[2px] border-solid border-[white]">
+        <div className="w-full h-screen bg-black px-4 md:px-0  pt-24">
+          <div className="w-full h-full max-h-[300px] max-w-xs sm:max-w-sm rounded-2xl flex flex-col items-center justify-center m-auto full-shadow bg-black border-[2px] border-solid border-[white]">
             {/* => Top bar */}
             <div className="w-full rounded-t-2xl py-6 px-4 flex flex-col items-start justify-center gap-3 border-solid border-0 border-b border-[rgb(231,227,235)]">
               <div className="w-full flex  items-center justify-between   ">
@@ -39,7 +39,7 @@ const Liquidity = () => {
             {/* =====>Add liquidity button */}
             <button
               onClick={() => Set_Add_Liquidity(true)}
-              className="flex justify-center items-center gap-2 my-6 w-[90%] py-3 rounded-xl bg-pink text-[black] font-semibold hover:opacity-80 transition-all duration-500"
+              className="flex justify-center items-center gap-2 my-6 w-[90%] py-3 rounded-xl bg-pink text-black font-semibold hover:opacity-80 transition-all duration-500"
             >
               <AddIcon className="text-[24px]" /> Add Liquidity
             </button>
