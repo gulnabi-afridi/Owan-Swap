@@ -14,54 +14,58 @@ import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import { SiTiktok } from "react-icons/si";
 import { AiFillInstagram } from "react-icons/ai";
 
-function Footer() {
-  const [mode, Set_Mode] = useState(true);
-  const [mode_Box, Set_Mode_Box] = useState(false);
-
-  const toggleDrawer = () => {
-    setIsOpen((prevState) => !prevState);
-  };
-
+function Footer({ Mode, SetMode, ModeBox, SetModeBox, Theme, SetTheme }) {
   return (
-    <div className="w-full min-h-[40px] bg-black border-t-[1px] px-4 xl:px-0 border-solid border-[#f2ca90]">
+    <div className="w-full min-h-[40px] bg-white dark:bg-black border-t-[1px] px-4 xl:px-0 border-solid border-black dark:border-[#f2ca90]">
       <div className="w-full max-w-[1200px] m-auto flex flex-col justify-center items-center md:items-start pt-16 pb-32 gap-10  ">
-        {/* social icons */}
+        {/* ==========> social icons */}
         <div className="w-full grid md:grid-cols-2 lg:grid-cols-3 gap-4">
           {/* telegram */}
           {SocialIcons.map((social, index) => {
             return (
-              <div className="w-full flex justify-between items-center bg-[#262626] p-4 md:py-5 border-[1px] border-solid border-white rounded-md cursor-pointer">
-                <div className="flex justify-center items-center gap-2 ">
-                  {social.icon}
-                  <p className="text-pink text-[30px]">{social.name}</p>
-                </div>
-                <CallMadeIcon className="text-[25px] text-[rgb(202,190,236)]" />
-              </div>
+              <Link legacyBehavior href={social.link}>
+                <a target="_blank">
+                  <div className="w-full flex justify-between items-center blackShadow bg-darkWhite dark:bg-[#262626] p-4 md:py-5 border-[1px] border-solid border-black dark:border-white rounded-md cursor-pointer hover:opacity-70">
+                    <div className="flex justify-center items-center gap-2 ">
+                      {social.icon}
+                      <p className=" text-black dark:text-pink text-[30px]">
+                        {social.name}
+                      </p>
+                    </div>
+                    <CallMadeIcon className="text-[25px] text-black dark:text-[rgb(202,190,236)]" />
+                  </div>
+                </a>
+              </Link>
             );
           })}
         </div>
         {/* ============> dark and light mode */}
         <div className="w-full flex justify-between items-center">
           <div className=" relative flex flex-col justify-center items-center">
-            {mode ? (
+            {Mode ? (
               <NightlightIcon
-                onClick={() => Set_Mode_Box(true)}
-                className="text-pink text-[28px] cursor-pointer hover:opacity-70 "
+                onClick={() => {
+                  SetModeBox(true);
+                }}
+                className="text-black dark:text-pink text-[28px] cursor-pointer hover:opacity-70 "
               />
             ) : (
               <LightModeIcon
-                onClick={() => Set_Mode_Box(true)}
-                className="text-pink cursor-pointer text-[28px] hover:opacity-70 "
+                onClick={() => {
+                  SetModeBox(true);
+                }}
+                className="text-black dark:text-pink cursor-pointer text-[28px] hover:opacity-70 "
               />
             )}
 
-            {mode_Box && (
+            {ModeBox && (
               <div className="absolute flex flex-col gap-2 items-start justify-center left-10 lg:left-0 top-8 w-[170px] min-h-[80px] bg-[#312e2e] shadow-[#646262] shadow-sm">
                 {/* ==============>light mode */}
                 <div
                   onClick={() => {
-                    Set_Mode(false);
-                    Set_Mode_Box(false);
+                    SetMode(false);
+                    SetModeBox(false);
+                    SetTheme("light");
                   }}
                   className="w-full flex justify-start items-center gap-2 cursor-pointer hover:bg-pink p-3"
                 >
@@ -71,8 +75,9 @@ function Footer() {
                 {/* ================>dark mode */}
                 <div
                   onClick={() => {
-                    Set_Mode(true);
-                    Set_Mode_Box(false);
+                    SetMode(true);
+                    SetModeBox(false);
+                    SetTheme("dark");
                   }}
                   className="w-full flex justify-start items-center gap-2 cursor-pointer hover:bg-pink p-3"
                 >
@@ -90,10 +95,10 @@ function Footer() {
                 width={28}
                 height={15}
               ></Image>
-              <p className="text-[17px] text-pink">$0.000012</p>
+              <p className="text-[17px] dark:text-pink">$0.5</p>
             </div>
-            <button className="text-white text-[17px] bg-pink px-4 py-1 rounded-xl hover:opacity-70 flex justify-center items-center gap-2">
-              Buy Ove
+            <button className="text-white dark:text-black text-[17px] bg-black dark:bg-pink px-4 py-1 rounded-xl hover:opacity-70 flex justify-center items-center gap-2">
+              Buy GOXC
               <ArrowForwardIcon />
             </button>
           </div>
@@ -107,27 +112,33 @@ export default Footer;
 
 const SocialIcons = [
   {
-    icon: <TelegramIcon className="text-pink text-[30px]" />,
+    icon: <TelegramIcon className="dark:text-pink text-[30px]" />,
     name: "Telegram",
+    link: "https://web.telegram.org/#/login",
   },
   {
-    icon: <FaDiscord className="text-pink text-[30px]" />,
+    icon: <FaDiscord className="dark:text-pink text-[30px]" />,
     name: "Discord",
+    link: "https://discord.com/login",
   },
   {
-    icon: <AiFillInstagram className="text-pink text-[30px]" />,
+    icon: <AiFillInstagram className="dark:text-pink text-[30px]" />,
     name: "Instagram",
+    link: " https://www.instagram.com/accounts/login/",
   },
   {
-    icon: <TwitterIcon className="text-pink text-[30px]" />,
+    icon: <TwitterIcon className="dark:text-pink text-[30px]" />,
     name: "Twitter",
+    link: "https://twitter.com/login",
   },
   {
-    icon: <SiTiktok className="text-pink text-[30px]" />,
+    icon: <SiTiktok className="dark:text-pink text-[30px]" />,
     name: "TikTok",
+    link: "https://www.tiktok.com/login",
   },
   {
-    icon: <FacebookOutlinedIcon className="text-pink text-[30px]" />,
+    icon: <FacebookOutlinedIcon className="dark:text-pink text-[30px]" />,
     name: "Facebook",
+    link: "https://www.facebook.com/",
   },
 ];

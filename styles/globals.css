@@ -4,15 +4,21 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-.bgLinearGredient{
-  background: linear-gradient(149deg, rgba(202,190,236,1) 0%, rgba(232,250,254,1) 52%, rgba(232,250,254,1) 100%);
+.bgLinearGredient {
+  background: linear-gradient(
+    149deg,
+    rgba(202, 190, 236, 1) 0%,
+    rgba(232, 250, 254, 1) 52%,
+    rgba(232, 250, 254, 1) 100%
+  );
 }
 * {
   font-family: "Kanit", sans-serif;
 }
 
 .full-shadow {
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: -1px 0px 9px 0px rgba(255, 255, 255, 0.49);
+}
+.blackShadow {
+  box-shadow: 1px 1px 24px -8px rgba(0, 0, 0, 0.75);
 }

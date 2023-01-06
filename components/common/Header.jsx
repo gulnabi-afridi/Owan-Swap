@@ -10,37 +10,26 @@ import { useRouter } from "next/router";
 import CallMadeIcon from "@mui/icons-material/CallMade";
 import NightlightIcon from "@mui/icons-material/Nightlight";
 import LightModeIcon from "@mui/icons-material/LightMode";
-import { useTheme } from "next-themes";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import { FaDiscord } from "react-icons/fa";
 
-function Header() {
+function Header({ Mode, SetMode, ModeBox, SetModeBox, Theme, SetTheme }) {
   const router = useRouter();
-  const { theme, setTheme } = useTheme();
 
   const [isOpen, setIsOpen] = useState(false);
-  const [mode, Set_Mode] = useState(true);
-  const [mode_Box, Set_Mode_Box] = useState(false);
 
   const toggleDrawer = () => {
     setIsOpen((prevState) => !prevState);
   };
-
-  const toggleMode = () => {
-    if (theme === "light") {
-      setTheme("dark");
-    } else setTheme("light");
-  };
-
   return (
-    <div className="w-full h-[68px] bg-white dark:bg-black flex justify-between items-center border-b-[1px] border-solid border-[#f2ca90] px-2 md:px-24">
+    <div className="w-full h-[68px] bg-white dark:bg-black flex justify-between items-center border-b-[1px] border-solid border-black dark:border-[#f2ca90] px-4 md:px-24">
       {/* ==========left portion */}
       <div className="flex justify-center items-center">
         {/* logo */}
         <Link href="/">
-          <div className="w-[90px] lg:w-[170px] h-[40px] flex justify-start items-center relative mr-0 md:mr-24">
-            <Image src="/logo.svg" fill></Image>
+          <div className="w-[40px] h-[40px] flex justify-start items-center relative mr-0 md:mr-24 hover:opacity-60">
+            <Image src="/Assets/logo.png" fill></Image>
           </div>
         </Link>
         <div className="xl:block hidden">
@@ -49,7 +38,7 @@ function Header() {
               <Link
                 onClick={() => router.push(item.path)}
                 href={item.path}
-                className={`text-pink text-[17px] mr-8 font-light hover:opacity-70 ${
+                className={`dark:text-pink text-black text-[17px] mr-8 font-light hover:opacity-70 ${
                   router.pathname === item.path ? "underline" : "none"
                 }  `}
               >
@@ -63,71 +52,86 @@ function Header() {
       {/* ==============right portion */}
       <div className="flex justify-center items-center gap-1 md:gap-5">
         {/* ============ove coin icon and price */}
-        <div className="xl:flex hidden justify-center items-center gap-2 mr-6">
+        <div className="xl:flex hidden justify-center items-center gap-2 mr-4">
           <Image src="/Assets/CoinImage/ove.png" width={28} height={15}></Image>
-          <p className="text-[17px] text-pink">$0.000012</p>
+          <p className="text-[17px] text-black dark:text-pink">$0.5</p>
         </div>
         {/* ============> dark and light mode */}
         <div className=" relative sm:flex hidden flex-col justify-center items-center">
-          {mode ? (
+          {Mode ? (
             <NightlightIcon
-              onClick={() => Set_Mode_Box(true)}
-              className="text-pink cursor-pointer hover:opacity-70 "
+              onClick={() => {
+                SetModeBox(true);
+              }}
+              className="text-black dark:text-pink cursor-pointer hover:opacity-70 "
             />
           ) : (
             <LightModeIcon
-              onClick={() => Set_Mode_Box(true)}
-              className="text-pink cursor-pointer hover:opacity-70 "
+              onClick={() => {
+                SetModeBox(true);
+              }}
+              className="text-black dark:text-pink cursor-pointer hover:opacity-70 "
             />
           )}
 
-          {mode_Box && (
-            <div className="absolute flex flex-col gap-2 items-start justify-center top-12 w-[170px] min-h-[80px] bg-[#312e2e] shadow-[#646262] shadow-sm">
+          {ModeBox && (
+            <div className="absolute flex flex-col gap-2 items-start justify-center top-12 w-[170px] min-h-[80px] bg-white dark:bg-[#312e2e] shadow-[#646262] shadow-sm">
               {/* ==============>light mode */}
               <div
                 onClick={() => {
-                  Set_Mode(false);
-                  Set_Mode_Box(false);
+                  SetMode(false);
+                  SetModeBox(false);
+                  SetTheme("light");
                 }}
-                className="w-full flex justify-start items-center gap-2 cursor-pointer hover:bg-pink p-3"
+                className="w-full flex justify-start items-center gap-2 cursor-pointer hover:bg-white dark:hover:bg-pink p-3"
               >
-                <LightModeIcon className="text-[white] hover:opacity-70 " />
-                <p className="text-[18px] text-[white]">Light</p>
+                <LightModeIcon className="text-black dark:text-pink hover:opacity-70 " />
+                <p className="text-[18px] text-black dark:text-pink">Light</p>
               </div>
               {/* ================>dark mode */}
               <div
                 onClick={() => {
-                  Set_Mode(true);
-                  Set_Mode_Box(false);
+                  SetMode(true);
+                  SetModeBox(false);
+                  SetTheme("dark");
                 }}
-                className="w-full flex justify-start items-center gap-2 cursor-pointer hover:bg-pink p-3"
+                className="w-full flex justify-start items-center gap-2 cursor-pointer hover:bg-white dark:hover:bg-pink p-3"
               >
-                <NightlightIcon className="text-[white] hover:opacity-70 " />
-                <p className="text-[18px] text-[white]">Dark</p>
+                <NightlightIcon className="text-black dark:text-pink hover:opacity-70 " />
+                <p className="text-[18px] text-black dark:text-pink ">Dark</p>
               </div>
             </div>
           )}
         </div>
         {/* ===========>Social links */}
-        <TwitterIcon className="text-pink text-[26px] xl:flex hidden cursor-pointer hover:opacity-70 " />
-        <TelegramIcon className="text-pink text-[26px] xl:flex hidden cursor-pointer hover:opacity-70 " />
-        <FaDiscord className="text-pink text-[26px] xl:flex hidden cursor-pointer hover:opacity-70 " />
+        <Link legacyBehavior href=" https://twitter.com/login">
+          <a target="_blank">
+            <TwitterIcon className="dark:text-pink text-black text-[26px] xl:flex hidden cursor-pointer hover:opacity-70 " />
+          </a>
+        </Link>
+        <Link legacyBehavior href="https://web.telegram.org/#/login">
+          <a target="_blank">
+            <TelegramIcon className="dark:text-pink text-black text-[26px] xl:flex hidden cursor-pointer hover:opacity-70 " />
+          </a>
+        </Link>
+        <Link legacyBehavior href="https://discord.com/login">
+          <a target="_blank">
+            <FaDiscord className="dark:text-pink text-black text-[26px] xl:flex hidden cursor-pointer hover:opacity-70 " />
+          </a>
+        </Link>
 
         {/* Language */}
-        <LanguageIcon className="xl:block hidden text-pink text-[28px] hover:opacity-70 cursor-pointer" />
+        <LanguageIcon className="xl:block hidden dark:text-pink text-black text-[28px] hover:opacity-70 cursor-pointer" />
         {/* Setting icon */}
-        <SettingsIcon className="xl:block hidden text-pink text-[28px] hover:opacity-70 cursor-pointer" />
+        <SettingsIcon className="xl:block hidden dark:text-pink text-black text-[28px] hover:opacity-70 cursor-pointer" />
         {/* ================> connect wallet button */}
-        <button
-          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-          className="text-black text-[12px] md:block hidden sm:text-[17px] bg-pink px-4 py-[6px] rounded-md hover:opacity-70"
-        >
+        <button className="text-white dark:text-black text-[12px] md:block hidden sm:text-[17px] bg-black dark:bg-pink px-4 py-[6px] rounded-md hover:opacity-70">
           Connect Wallet
         </button>
 
         <div className="xl:hidden block">
           <Hamburger
-            color="#E933FF"
+            className="dark:text-pink text-black"
             rounded
             size={24}
             toggled={isOpen}
@@ -139,16 +143,15 @@ function Header() {
           open={isOpen}
           onClose={toggleDrawer}
           direction="left"
-          className="drawer"
           style={{ width: "80%", height: "100vh", background: "black" }}
         >
-          <div className="w-full flex flex-col justify-center items-start p-4 py-12 gap-10  text-[#e8e1e1]">
+          <div className="w-full min-h-screen bg-darkWhite dark:bg-black flex flex-col justify-start items-start p-4 py-10 gap-10 text-black  dark:text-[#e8e1e1]">
             {/* Logo */}
-            {/* <Link href="/">
-              <div className="w-[170px] h-[40px] flex justify-center items-center relative">
-                <Image src="/logo.svg" fill></Image>
-              </div>
-            </Link> */}
+            <Link href="/">
+          <div className="w-[40px] h-[40px] flex justify-start items-center relative mr-0 md:mr-24 hover:opacity-60">
+            <Image src="/Assets/logo.png" fill></Image>
+          </div>
+        </Link>
             {MobileNav.map((item, index) => {
               return (
                 <Link
@@ -157,10 +160,10 @@ function Header() {
                     setIsOpen(false);
                   }}
                   href={item.path}
-                  className="w-full text-pink text-[18px] mr-8 font-light hover:opacity-70 border-b-[0.5px] border-solid border-[white]"
+                  className="w-full text-black dark:text-pink text-[18px] mr-8 font-light hover:opacity-70 border-b-[0.5px] border-solid border-black dark:border-[white]"
                 >
                   {item.navItem}
-                  <CallMadeIcon className="text-base ml-1 text-[rgb(202,190,236)]" />
+                  <CallMadeIcon className="text-base ml-1 text-black dark:text-[rgb(202,190,236)]" />
                 </Link>
               );
             })}
@@ -168,7 +171,7 @@ function Header() {
               onClick={() => {
                 setIsOpen(false);
               }}
-              className="text-black text-[14px] bg-pink max-w-[230px] w-full h-[45px] rounded-md hover:opacity-70"
+              className="text-white dark:text-black text-[14px] bg-black dark:bg-pink max-w-[230px] w-full h-[45px] rounded-md hover:opacity-70"
             >
               Connect Wallet
             </button>
@@ -208,6 +211,10 @@ const HeaderNav = [
   // },
 ];
 const MobileNav = [
+  {
+    navItem: "Home",
+    path: "/",
+  },
   {
     navItem: "Swap",
     path: "/swap",

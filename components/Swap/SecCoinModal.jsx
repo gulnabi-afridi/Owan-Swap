@@ -12,12 +12,12 @@ function SecCoinModal({ open, setOpen, coin, setCoin }) {
   return (
     <Modal open={open} onClose={handleClose} className="mx-4">
       <div
-        className="absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] max-w-[450px] w-full shadow-md overflow-hidden flex flex-col gap-4
-       px-6 h-full max-h-[700px] outline-none bg-black border-2 border-solid rounded-3xl border-white"
+        className="absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] max-w-[450px] w-full black-shadow dark:full-shadow overflow-hidden flex flex-col gap-4
+       px-6 h-full max-h-[700px] outline-none bg-white dark:bg-black border-2 border-solid rounded-3xl border-black dark:border-white"
       >
         {/* => Top bar */}
-        <div className="w-full py-6 flex items-center justify-between gap-3 border-solid border-0 border-b border-[rgb(231,227,235)]">
-          <h2 className="font-semibold text-xl text-pink">Select a Token</h2>
+        <div className="w-full py-6 flex items-center justify-between gap-3 border-solid border-0 border-b border-black dark:border-[rgb(231,227,235)]">
+          <h2 className="font-semibold text-xl text-black dark:text-pink">Select a Token</h2>
           <CloseIcon
             className="fill-[#FFAA27] cursor-pointer text-xl"
             onClick={() => setOpen(false)}
@@ -26,7 +26,7 @@ function SecCoinModal({ open, setOpen, coin, setCoin }) {
         {/* =>search input */}
         <div className="w-full h-[80px] ">
           <input
-            className="w-full h-full px-4 rounded-xl bg-[#eeeaf4] border-[1px] border-solid border-[#cbcac9] focus:outline-[4px] focus:outline-solid focus:outline-pink"
+            className="w-full h-full px-4 rounded-xl bg-white dark:bg-[#eeeaf4] border-[1px] border-solid border-black dark:border-[#cbcac9] focus:outline-[4px] focus:outline-solid focus:outline-black dark:focus:outline-pink"
             type="text"
             id="search"
             name="search"
@@ -35,7 +35,7 @@ function SecCoinModal({ open, setOpen, coin, setCoin }) {
         </div>
         {/* =====>common tokens  */}
         <div className="flex flex-col gap-4">
-          <p className="text-[14px] text-pink">Common tokens</p>
+          <p className="text-[14px] dark:text-pink">Common tokens</p>
           <div className="grid grid-cols-3 md:grid-cols-4 justify-center items-center gap-2">
             {CommonTokes.map((coin, index) => {
               return (
@@ -48,7 +48,7 @@ function SecCoinModal({ open, setOpen, coin, setCoin }) {
                   className="cursor-pointer flex justify-center items-center gap-2 border-[1px] border-solid border-[#bdb8af] py-1 px-2 rounded-xl"
                 >
                   <Image src={coin.ico} width={28} height={10}></Image>
-                  <p className="uppercase text-pink text-[17px]">
+                  <p className="uppercase dark:text-pink text-[17px]">
                     {coin.title}
                   </p>
                 </div>
@@ -69,10 +69,10 @@ function SecCoinModal({ open, setOpen, coin, setCoin }) {
               >
                 <Image src={coin.ico} width={28} height={10}></Image>
                 {/* coin name */}
-                <p className="uppercase text-pink text-[18px] font-semibold leading-5">
+                <p className="uppercase dark:text-pink text-[18px] font-semibold leading-5">
                   {coin.title}
                   <br />{" "}
-                  <span className="font-light text-[12px] text-pink">
+                  <span className="font-light text-[12px] dark:text-pink">
                     {coin.subTitle}
                   </span>
                 </p>
@@ -81,7 +81,7 @@ function SecCoinModal({ open, setOpen, coin, setCoin }) {
           })}
         </div>
         {/* ========> manage token button */}
-        <button className="text-pink py-4 text-[18px] hover:opacity-70">
+        <button className="dark:text-pink py-4 text-[18px] hover:opacity-70">
           Manage Token
         </button>
       </div>
