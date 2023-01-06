@@ -104,7 +104,7 @@ function Header({ Mode, SetMode, ModeBox, SetModeBox, Theme, SetTheme }) {
           )}
         </div>
         {/* ===========>Social links */}
-        <div className="xl:flex hidden justify-center items-center gap-3">
+        <div className="md:flex hidden justify-center items-center gap-3">
           <Link legacyBehavior href=" https://twitter.com/login">
             <a target="_blank">
               <TwitterIcon className="dark:text-pink text-black text-[26px] cursor-pointer hover:opacity-70 " />
