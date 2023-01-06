@@ -104,7 +104,7 @@ function Header({ Mode, SetMode, ModeBox, SetModeBox, Theme, SetTheme }) {
           )}
         </div>
         {/* ===========>Social links */}
-        <div className="md:flex hidden justify-center items-center gap-3">
+        <div className="xl:flex hidden justify-center items-center gap-3">
           <Link legacyBehavior href=" https://twitter.com/login">
             <a target="_blank">
               <TwitterIcon className="dark:text-pink text-black text-[26px] cursor-pointer hover:opacity-70 " />
@@ -122,10 +122,13 @@ function Header({ Mode, SetMode, ModeBox, SetModeBox, Theme, SetTheme }) {
           </Link>
         </div>
 
+        <div className="xl:flex hidden justify-center items-center gap-2 ">
         {/* Language */}
-        <LanguageIcon className="xl:block hidden dark:text-pink text-black text-[28px] hover:opacity-70 cursor-pointer" />
+        <LanguageIcon className=" dark:text-pink text-black text-[28px] hover:opacity-70 cursor-pointer" />
         {/* Setting icon */}
-        <SettingsIcon className="xl:block hidden dark:text-pink text-black text-[28px] hover:opacity-70 cursor-pointer" />
+        <SettingsIcon className=" dark:text-pink text-black text-[28px] hover:opacity-70 cursor-pointer" />
+
+        </div>
         {/* ================> connect wallet button */}
         <button className="text-white dark:text-black text-[12px] md:block hidden sm:text-[17px] bg-black dark:bg-pink px-4 py-[6px] rounded-md hover:opacity-70">
           Connect Wallet
