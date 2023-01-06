@@ -104,21 +104,23 @@ function Header({ Mode, SetMode, ModeBox, SetModeBox, Theme, SetTheme }) {
           )}
         </div>
         {/* ===========>Social links */}
-        <Link legacyBehavior href=" https://twitter.com/login">
-          <a target="_blank">
-            <TwitterIcon className="dark:text-pink text-black text-[26px] xl:flex hidden cursor-pointer hover:opacity-70 " />
-          </a>
-        </Link>
-        <Link legacyBehavior href="https://web.telegram.org/#/login">
-          <a target="_blank">
-            <TelegramIcon className="dark:text-pink text-black text-[26px] xl:flex hidden cursor-pointer hover:opacity-70 " />
-          </a>
-        </Link>
-        <Link legacyBehavior href="https://discord.com/login">
-          <a target="_blank">
-            <FaDiscord className="dark:text-pink text-black text-[26px] xl:flex hidden cursor-pointer hover:opacity-70 " />
-          </a>
-        </Link>
+        <div className="xl:flex hidden justify-center items-center gap-3">
+          <Link legacyBehavior href=" https://twitter.com/login">
+            <a target="_blank">
+              <TwitterIcon className="dark:text-pink text-black text-[26px] cursor-pointer hover:opacity-70 " />
+            </a>
+          </Link>
+          <Link legacyBehavior href="https://web.telegram.org/#/login">
+            <a target="_blank">
+              <TelegramIcon className="dark:text-pink text-black text-[26px] cursor-pointer hover:opacity-70 " />
+            </a>
+          </Link>
+          <Link legacyBehavior href="https://discord.com/login">
+            <a target="_blank">
+              <FaDiscord className="dark:text-pink text-black text-[26px] cursor-pointer hover:opacity-70 " />
+            </a>
+          </Link>
+        </div>
 
         {/* Language */}
         <LanguageIcon className="xl:block hidden dark:text-pink text-black text-[28px] hover:opacity-70 cursor-pointer" />
@@ -148,10 +150,10 @@ function Header({ Mode, SetMode, ModeBox, SetModeBox, Theme, SetTheme }) {
           <div className="w-full min-h-screen bg-darkWhite dark:bg-black flex flex-col justify-start items-start p-4 py-10 gap-10 text-black  dark:text-[#e8e1e1]">
             {/* Logo */}
             <Link href="/">
-          <div className="w-[40px] h-[40px] flex justify-start items-center relative mr-0 md:mr-24 hover:opacity-60">
-            <Image src="/Assets/logo.png" fill></Image>
-          </div>
-        </Link>
+              <div className="w-[40px] h-[40px] flex justify-start items-center relative mr-0 md:mr-24 hover:opacity-60">
+                <Image src="/Assets/logo.png" fill></Image>
+              </div>
+            </Link>
             {MobileNav.map((item, index) => {
               return (
                 <Link
@@ -193,22 +195,6 @@ const HeaderNav = [
     navItem: "Liquidity",
     path: "/liquidity",
   },
-  // {
-  //   navItem: "Twitter",
-  //   path: "https://twitter.com/i/flow/login",
-  // },
-  // {
-  //   navItem: "Telegram",
-  //   path: "https://telegr.am/user_mgt/login",
-  // },
-  // {
-  //   navItem: "Discord",
-  //   path: "https://discord.com/",
-  // },
-  // {
-  //   navItem: "Instagram",
-  //   path: "https://www.instagram.com/",
-  // },
 ];
 const MobileNav = [
   {
