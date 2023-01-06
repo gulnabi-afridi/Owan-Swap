@@ -83,10 +83,10 @@ function Header({ Mode, SetMode, ModeBox, SetModeBox, Theme, SetTheme }) {
                   SetModeBox(false);
                   SetTheme("light");
                 }}
-                className="w-full flex justify-start items-center gap-2 cursor-pointer hover:bg-white dark:hover:bg-pink p-3"
+                className="w-full flex justify-start items-center gap-2 cursor-pointer hover:bg-darkGrey dark:hover:bg-pink p-3"
               >
-                <LightModeIcon className="text-black dark:text-pink hover:opacity-70 " />
-                <p className="text-[18px] text-black dark:text-pink">Light</p>
+                <LightModeIcon className="text-black  dark:text-white hover:opacity-70 " />
+                <p className="text-[18px] text-black dark:text-white">Light</p>
               </div>
               {/* ================>dark mode */}
               <div
@@ -95,10 +95,10 @@ function Header({ Mode, SetMode, ModeBox, SetModeBox, Theme, SetTheme }) {
                   SetModeBox(false);
                   SetTheme("dark");
                 }}
-                className="w-full flex justify-start items-center gap-2 cursor-pointer hover:bg-white dark:hover:bg-pink p-3"
+                className="w-full flex justify-start items-center gap-2 cursor-pointer hover:bg-darkGrey dark:hover:bg-pink p-3"
               >
-                <NightlightIcon className="text-black dark:text-pink hover:opacity-70 " />
-                <p className="text-[18px] text-black dark:text-pink ">Dark</p>
+                <NightlightIcon className="text-black dark:text-white hover:opacity-70 " />
+                <p className="text-[18px] text-black dark:text-white ">Dark</p>
               </div>
             </div>
           )}

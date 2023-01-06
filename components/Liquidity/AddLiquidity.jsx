@@ -47,7 +47,7 @@ const AddLiquidity = ({ setLiquidity }) => {
               <RestoreIcon className="cursor-pointer text-black dark:text-pink  " />
             </div>
           </div>
-          <p className="text-grey text-[14px] flex justify-center items-center gap-2">
+          <p className="text-grey dark:text-darkGrey text-[14px] flex justify-center items-center gap-2">
             <HelpOutlineIcon className="text-[18px]" /> Receive LP tokens and
             earn 0.17% trading fees
           </p>
@@ -169,14 +169,14 @@ const AddLiquidity = ({ setLiquidity }) => {
 
           <button
             onClick={() => setOpenModal(true)}
-            className="w-[90%] rounded-[25px] bg-black dark:bg-pink py-3 px-5 text-white dark:text-black font-semibold hover:opacity-80 transition-all duration-500"
+            className="w-[90%] rounded-[25px] bg-black dark:bg-pink py-3 px-5 text-white dark:text-darkGrey font-semibold hover:opacity-80 transition-all duration-500"
           >
             Connect Wallet
           </button>
         </div>
       </div>
       {/* =========>By adding liquidity how much you will earn */}
-      <div className="w-full max-w-xs sm:max-w-sm rounded-2xl m-auto my-3 bg-white dark:bg-black p-5 flex justify-center items-center full-shadow border-[2px] border-solid border-black dark:border-none blackShadow dark:full-shadow">
+      <div className="w-full max-w-xs sm:max-w-sm rounded-2xl m-auto my-3 bg-white dark:bg-black p-5 flex justify-center items-center full-shadow border-[2px] border-solid border-black dark:border-white blackShadow dark:full-shadow mt-4">
         <p className="w-full text-center text-[14px] font-normal text-black dark:text-pink">
           🥞 By adding liquidity you'll earn 0.17% of all trades on this pair
           proportional to your share of the pool. Fees are added to the pool,

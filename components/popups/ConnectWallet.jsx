@@ -45,8 +45,7 @@ const ConnectWallet = ({ open, setOpen }) => {
           {/* => Connect wallet button */}
 
           <button
-            onClick={() => setOpenModal(true)}
-            className="w-[95%] rounded-[25px] bg-black dark:bg-pink py-3 px-5 text-white dark:text-black font-semibold hover:opacity-80 transition-all duration-500"
+            className="w-[95%] rounded-[25px] bg-black dark:bg-pink py-3 px-5 text-white dark:text-darkGrey font-semibold hover:opacity-80 transition-all duration-500"
           >
             Learn How To Connect Wallet
           </button>

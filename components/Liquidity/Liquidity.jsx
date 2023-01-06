@@ -26,7 +26,7 @@ const Liquidity = () => {
                   <RestoreIcon className="cursor-pointer text-black dark:text-pink  " />
                 </div>
               </div>
-              <p className="text-grey text-[14px] font-light">
+              <p className="dark:text-darkGrey text-black text-[14px] font-light">
                 Trade tokens in an instant
               </p>
             </div>
@@ -39,7 +39,7 @@ const Liquidity = () => {
             {/* =====>Add liquidity button */}
             <button
               onClick={() => Set_Add_Liquidity(true)}
-              className="flex justify-center items-center gap-2 my-6 w-[90%] py-3 rounded-xl bg-black dark:bg-pink text-white dark:text-black font-semibold hover:opacity-80 transition-all duration-500"
+              className="flex justify-center items-center gap-2 my-6 w-[90%] py-3 rounded-xl bg-black dark:bg-pink text-white dark:text-darkGrey font-semibold hover:opacity-80 transition-all duration-500"
             >
               <AddIcon className="text-[24px]" /> Add Liquidity
             </button>

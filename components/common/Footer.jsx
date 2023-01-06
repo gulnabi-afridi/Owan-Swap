@@ -59,7 +59,7 @@ function Footer({ Mode, SetMode, ModeBox, SetModeBox, Theme, SetTheme }) {
             )}
 
             {ModeBox && (
-              <div className="absolute flex flex-col gap-2 items-start justify-center left-10 lg:left-0 top-8 w-[170px] min-h-[80px] bg-[#312e2e] shadow-[#646262] shadow-sm">
+              <div className="absolute flex flex-col gap-2 items-start justify-center left-10 lg:left-0 top-8 w-[170px] min-h-[80px] bg-white dark:bg-[#312e2e] shadow-[#646262] shadow-sm">
                 {/* ==============>light mode */}
                 <div
                   onClick={() => {
@@ -67,10 +67,10 @@ function Footer({ Mode, SetMode, ModeBox, SetModeBox, Theme, SetTheme }) {
                     SetModeBox(false);
                     SetTheme("light");
                   }}
-                  className="w-full flex justify-start items-center gap-2 cursor-pointer hover:bg-pink p-3"
+                  className="w-full flex justify-start items-center gap-2 cursor-pointer hover:bg-darkGrey dark:hover:bg-pink p-3"
                 >
-                  <LightModeIcon className="text-[white] hover:opacity-70 " />
-                  <p className="text-[18px] text-[white]">Light</p>
+                  <LightModeIcon className="text-black dark:text-[white] hover:opacity-70 " />
+                  <p className="text-[18px] text-black dark:text-[white]">Light</p>
                 </div>
                 {/* ================>dark mode */}
                 <div
@@ -79,10 +79,10 @@ function Footer({ Mode, SetMode, ModeBox, SetModeBox, Theme, SetTheme }) {
                     SetModeBox(false);
                     SetTheme("dark");
                   }}
-                  className="w-full flex justify-start items-center gap-2 cursor-pointer hover:bg-pink p-3"
+                  className="w-full flex justify-start items-center gap-2 cursor-pointer hover:bg-darkGrey dark:hover:bg-pink p-3"
                 >
-                  <NightlightIcon className="text-[white] hover:opacity-70 " />
-                  <p className="text-[18px] text-[white]">Dark</p>
+                  <NightlightIcon className="text-black dark:text-[white] hover:opacity-70 " />
+                  <p className="text-[18px] text-black dark:text-[white]">Dark</p>
                 </div>
               </div>
             )}
@@ -97,7 +97,7 @@ function Footer({ Mode, SetMode, ModeBox, SetModeBox, Theme, SetTheme }) {
               ></Image>
               <p className="text-[17px] dark:text-pink">$0.5</p>
             </div>
-            <button className="text-white dark:text-black text-[17px] bg-black dark:bg-pink px-4 py-1 rounded-xl hover:opacity-70 flex justify-center items-center gap-2">
+            <button className="text-white dark:text-darkGrey text-[17px] bg-black dark:bg-pink px-4 py-1 rounded-xl hover:opacity-70 flex justify-center items-center gap-2">
               Buy GOXC
               <ArrowForwardIcon />
             </button>
@@ -109,6 +109,8 @@ function Footer({ Mode, SetMode, ModeBox, SetModeBox, Theme, SetTheme }) {
 }
 
 export default Footer;
+
+
 
 const SocialIcons = [
   {

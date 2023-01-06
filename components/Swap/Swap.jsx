@@ -44,7 +44,7 @@ const SwapModal = () => {
               <RefreshIcon className="cursor-pointer fill-black dark:fill-pink hover:opacity-50" />
             </div>
           </div>
-          <p className="text-grey text-md">Trade tokens in an instant</p>
+          <p className="text-grey dark:text-darkGrey text-md">Trade tokens in an instant</p>
         </div>
         {/* => Swaping boxes */}
         <div className="w-full py-4 pb-8 px-4 flex flex-col items-center justify-between gap-16  rounded-b-xl">
@@ -138,7 +138,7 @@ const SwapModal = () => {
 
           <button
             onClick={() => setOpenModal(true)}
-            className="w-[80%] rounded-[25px] bg-black dark:bg-pink py-3 px-5 text-white dark:text-black font-semibold hover:opacity-80 transition-all duration-500"
+            className="w-[80%] rounded-[25px] bg-black dark:bg-pink py-3 px-5 text-white dark:text-darkGrey font-semibold hover:opacity-80 transition-all duration-500"
           >
             Connect Wallet
           </button>

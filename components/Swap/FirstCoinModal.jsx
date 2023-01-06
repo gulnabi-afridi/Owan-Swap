@@ -17,7 +17,7 @@ function FirstCoinModal({ open, setOpen, coin, setCoin }) {
       >
         {/* => Top bar */}
         <div className="w-full py-6 flex items-center justify-between gap-3 border-solid border-0 border-b border-black dark:border-[rgb(231,227,235)]">
-          <h2 className="font-semibold text-xl text-white dark:text-pink">
+          <h2 className="font-semibold text-xl text-black dark:text-pink">
             Select a Token
           </h2>
           <CloseIcon
