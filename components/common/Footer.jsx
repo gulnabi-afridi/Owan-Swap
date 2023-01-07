@@ -91,8 +91,8 @@ function Footer({ Mode, SetMode, ModeBox, SetModeBox, Theme, SetTheme }) {
           <div className="flex justify-center items-center gap-6">
             <div className="flex justify-center items-center gap-3">
               <Image
-                src="/Assets/CoinImage/ove.png"
-                width={28}
+                src="/Assets/logo.png"
+                width={34}
                 height={15}
               ></Image>
               <p className="text-[17px] dark:text-pink">$0.5</p>

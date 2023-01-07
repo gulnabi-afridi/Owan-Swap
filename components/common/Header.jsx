@@ -28,8 +28,8 @@ function Header({ Mode, SetMode, ModeBox, SetModeBox, Theme, SetTheme }) {
       <div className="flex justify-center items-center">
         {/* logo */}
         <Link href="/">
-          <div className="w-[40px] h-[40px] flex justify-start items-center relative mr-0 md:mr-24 hover:opacity-60">
-            <Image src="/Assets/logo.png" fill></Image>
+          <div className="w-[84px] h-[44px] flex justify-start items-center relative mr-0 md:mr-24 hover:opacity-60">
+            <Image src="/Assets/goxSwap.png" fill></Image>
           </div>
         </Link>
         <div className="xl:block hidden">
@@ -53,7 +53,7 @@ function Header({ Mode, SetMode, ModeBox, SetModeBox, Theme, SetTheme }) {
       <div className="flex justify-center items-center gap-1 md:gap-5">
         {/* ============ove coin icon and price */}
         <div className="xl:flex hidden justify-center items-center gap-2 mr-4">
-          <Image src="/Assets/CoinImage/ove.png" width={28} height={15}></Image>
+          <Image src="/Assets/logo.png" width={34} height={15}></Image>
           <p className="text-[17px] text-black dark:text-pink">$0.5</p>
         </div>
         {/* ============> dark and light mode */}
@@ -104,7 +104,7 @@ function Header({ Mode, SetMode, ModeBox, SetModeBox, Theme, SetTheme }) {
           )}
         </div>
         {/* ===========>Social links */}
-        <div className="xl:flex hidden justify-center items-center gap-3">
+        {/* <div className="xl:flex hidden justify-center items-center gap-3">
           <Link legacyBehavior href=" https://twitter.com/login">
             <a target="_blank">
               <TwitterIcon className="dark:text-pink text-black text-[26px] cursor-pointer hover:opacity-70 " />
@@ -120,14 +120,13 @@ function Header({ Mode, SetMode, ModeBox, SetModeBox, Theme, SetTheme }) {
               <FaDiscord className="dark:text-pink text-black text-[26px] cursor-pointer hover:opacity-70 " />
             </a>
           </Link>
-        </div>
+        </div> */}
 
         <div className="xl:flex hidden justify-center items-center gap-2 ">
-        {/* Language */}
-        <LanguageIcon className=" dark:text-pink text-black text-[28px] hover:opacity-70 cursor-pointer" />
-        {/* Setting icon */}
-        <SettingsIcon className=" dark:text-pink text-black text-[28px] hover:opacity-70 cursor-pointer" />
-
+          {/* Language */}
+          <LanguageIcon className=" dark:text-pink text-black text-[28px] hover:opacity-70 cursor-pointer" />
+          {/* Setting icon */}
+          <SettingsIcon className=" dark:text-pink text-black text-[28px] hover:opacity-70 cursor-pointer" />
         </div>
         {/* ================> connect wallet button */}
         <button className="text-white dark:text-black text-[12px] md:block hidden sm:text-[17px] bg-black dark:bg-pink px-4 py-[6px] rounded-md hover:opacity-70">
@@ -153,8 +152,8 @@ function Header({ Mode, SetMode, ModeBox, SetModeBox, Theme, SetTheme }) {
           <div className="w-full min-h-screen bg-darkWhite dark:bg-black flex flex-col justify-start items-start p-4 py-10 gap-10 text-black  dark:text-[#e8e1e1]">
             {/* Logo */}
             <Link href="/">
-              <div className="w-[40px] h-[40px] flex justify-start items-center relative mr-0 md:mr-24 hover:opacity-60">
-                <Image src="/Assets/logo.png" fill></Image>
+              <div className="w-[86px] h-[40px] flex justify-start items-center relative mr-0 md:mr-24 hover:opacity-60">
+                <Image src="/Assets/goxSwap.png" fill></Image>
               </div>
             </Link>
             {MobileNav.map((item, index) => {
