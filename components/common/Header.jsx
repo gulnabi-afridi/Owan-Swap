@@ -14,6 +14,7 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import { FaDiscord } from "react-icons/fa";
 
+
 function Header({ Mode, SetMode, ModeBox, SetModeBox, Theme, SetTheme }) {
   const router = useRouter();
 
@@ -54,7 +55,7 @@ function Header({ Mode, SetMode, ModeBox, SetModeBox, Theme, SetTheme }) {
         {/* ============ove coin icon and price */}
         <div className="xl:flex hidden justify-center items-center gap-2 mr-4">
           <Image src="/Assets/logo.png" width={34} height={15}></Image>
-          <p className="text-[17px] text-black dark:text-pink">$0.5</p>
+          <p className="text-[17px] text-black dark:text-pink">$0.05</p>
         </div>
         {/* ============> dark and light mode */}
         <div className=" relative sm:flex hidden flex-col justify-center items-center">

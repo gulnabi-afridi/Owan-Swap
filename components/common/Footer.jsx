@@ -95,7 +95,7 @@ function Footer({ Mode, SetMode, ModeBox, SetModeBox, Theme, SetTheme }) {
                 width={34}
                 height={15}
               ></Image>
-              <p className="text-[17px] dark:text-pink">$0.5</p>
+              <p className="text-[17px] dark:text-pink">$0.05</p>
             </div>
             <button className="text-white dark:text-darkGrey text-[17px] bg-black dark:bg-pink px-4 py-1 rounded-xl hover:opacity-70 flex justify-center items-center gap-2">
               Buy GOXC
